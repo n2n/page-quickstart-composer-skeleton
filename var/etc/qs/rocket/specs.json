@@ -407,8 +407,8 @@
     },
     "commonEiMasks": [],
     "menuItems": {
-		"qs-blog-article": [],
-		"qs-blog-category": [],
-		"qs-blog-comment": []
-	}
+        "qs-blog-article": [],
+        "qs-blog-category": [],
+        "qs-blog-comment": []
+    }
 }

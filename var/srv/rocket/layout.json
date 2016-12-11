@@ -1,5 +1,8 @@
 {
     "menuGroups": {
+        "Seitenverwaltung": {
+            "page-page": "Seiten"
+        },
         "Blog": {
             "qs-blog-article": "Artikel",
             "qs-blog-category": "Kategorien",
