@@ -1,0 +1,17 @@
+{
+    "specs": {
+        "qst-qst-page-controller": {
+            "type": "entity",
+            "entity": "qst\\controller\\QstPageController",
+            "dataSourceName": null,
+            "label": "Qst Page Controller",
+            "pluralLabel": "Qst Page Controllers",
+            "fields": [],
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
+        }
+    },
+    "commonEiMasks": [],
+    "menuItems": []
+}

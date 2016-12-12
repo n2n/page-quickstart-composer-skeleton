@@ -1,0 +1,223 @@
+{
+    "specs": {
+        "qsci-qsci-wysiwyg": {
+            "type": "entity",
+            "entity": "qsci\\bo\\QsciWysiwyg",
+            "dataSourceName": null,
+            "label": "Freitext",
+            "pluralLabel": "Freitexte",
+            "fields": {
+                "contentHtml": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\wysiwyg\\WysiwygEiField",
+                    "props": [],
+                    "label": "Inhalt",
+                    "objectProperty": "contentHtml",
+                    "entityProperty": "contentHtml"
+                }
+            },
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
+        },
+        "qsci-qsci-image": {
+            "type": "entity",
+            "entity": "qsci\\bo\\QsciImage",
+            "dataSourceName": null,
+            "label": "Bild",
+            "pluralLabel": "Bilder",
+            "fields": {
+                "fileImage": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\file\\FileEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": true,
+                        "draftable": false,
+                        "allowedExtensions": [
+                            "jpg",
+                            "png",
+                            "gif",
+                            "jpeg"
+                        ],
+                        "dimensionImportMode": "usedOnly",
+                        "extraThumbDimensions": [],
+                        "checkImageResourceMemory": true
+                    },
+                    "label": "Bild",
+                    "objectProperty": "fileImage",
+                    "entityProperty": "fileImage"
+                },
+                "title": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\StringEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": false,
+                        "draftable": false,
+                        "maxlength": null,
+                        "multiline": false
+                    },
+                    "label": "Titel",
+                    "objectProperty": "title",
+                    "entityProperty": "title"
+                }
+            },
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
+        },
+        "qsci-qsci-article": {
+            "type": "entity",
+            "entity": "qsci\\bo\\QsciArticle",
+            "dataSourceName": null,
+            "label": "Artikel",
+            "pluralLabel": "Artikel",
+            "fields": {
+                "title": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\StringEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": true,
+                        "draftable": false,
+                        "maxlength": null,
+                        "multiline": false
+                    },
+                    "label": "Titel",
+                    "objectProperty": "title",
+                    "entityProperty": "title"
+                },
+                "descriptionHtml": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\wysiwyg\\WysiwygEiField",
+                    "props": {
+                        "displayInOverview": false,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": true,
+                        "draftable": false,
+                        "mode": "simple",
+                        "linkConfig": [],
+                        "cssConfig": null,
+                        "tableEditing": false,
+                        "bbcode": false
+                    },
+                    "label": "Beschreibung",
+                    "objectProperty": "descriptionHtml",
+                    "entityProperty": "descriptionHtml"
+                },
+                "fileImage": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\file\\FileEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": true,
+                        "draftable": false,
+                        "allowedExtensions": [
+                            "jpg",
+                            "png",
+                            "gif",
+                            "jpeg"
+                        ],
+                        "dimensionImportMode": "usedOnly",
+                        "extraThumbDimensions": [],
+                        "checkImageResourceMemory": true
+                    },
+                    "label": "Bild",
+                    "objectProperty": "fileImage",
+                    "entityProperty": "fileImage"
+                }
+            },
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
+        },
+        "qsci-qsci-attachment": {
+            "type": "entity",
+            "entity": "qsci\\bo\\QsciAttachment",
+            "dataSourceName": null,
+            "label": "Attachment",
+            "pluralLabel": "Attachments",
+            "fields": {
+                "file": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\file\\FileEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": true,
+                        "draftable": false,
+                        "allowedExtensions": [],
+                        "extraThumbDimensions": [],
+                        "checkImageResourceMemory": true
+                    },
+                    "label": "Attachment",
+                    "objectProperty": "file",
+                    "entityProperty": "file"
+                },
+                "name": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\StringEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": false,
+                        "draftable": false,
+                        "maxlength": null,
+                        "multiline": false
+                    },
+                    "label": "Name",
+                    "objectProperty": "name",
+                    "entityProperty": "name"
+                },
+                "description": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\string\\StringEiField",
+                    "props": {
+                        "displayInOverview": true,
+                        "displayInDetailView": true,
+                        "displayInEditView": true,
+                        "displayInAddView": true,
+                        "constant": false,
+                        "readOnly": false,
+                        "mandatory": false,
+                        "draftable": false,
+                        "maxlength": null,
+                        "multiline": false
+                    },
+                    "label": "Beschreibung",
+                    "objectProperty": "description",
+                    "entityProperty": "description"
+                }
+            },
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
+        }
+    },
+    "commonEiMasks": [],
+    "menuItems": []
+}

@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+ 
+#lang-navi {
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+}
+ 
+#lang-navi .active > a {
+    color: #ccc;
+}
+ 
+.navbar {
+    border-radius: unset;
+}
