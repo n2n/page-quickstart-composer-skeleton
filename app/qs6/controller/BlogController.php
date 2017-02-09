@@ -8,6 +8,7 @@ use n2n\web\http\annotation\AnnoPath;
 use qs6\model\BlogDao;
 use n2n\web\http\PageNotFoundException;
 use qs6\model\BlogCommentForm;
+use qs6\bo\BlogCategory;
 
 class BlogController extends ControllerAdapter {
 	private static function _annos(AnnoInit $ai) {
@@ -15,15 +16,20 @@ class BlogController extends ControllerAdapter {
 	}
 	
 	private $blogDao;
+	private $category;
 	
 	private function _init(BlogDao $blogDao) {
 		$this->blogDao = $blogDao;
 	}
 	
+	public function setCategory(BlogCategory $category = null) {
+		$this->category = $category;
+	}
+	
 	public function index() {
-		// Artikel holen
-		$blogArticles = $this->blogDao->getOnlineBlogArticles();
-		// Artikel der View übergeben
+		// Kategorie übergeben
+		$blogArticles = $this->blogDao->getOnlineBlogArticles($this->category);
+		 
 		$this->forward('..\view\overview.html', array('blogArticles' => $blogArticles));
 	}
 	

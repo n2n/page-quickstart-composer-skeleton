@@ -403,6 +403,25 @@
             },
             "modificators": [],
             "defaultMaskId": null
+        },
+        "qs6-blog6-page-controller": {
+            "type": "entity",
+            "entity": "qs6\\controller\\Blog6PageController",
+            "dataSourceName": null,
+            "label": "Blog6 Controller",
+            "pluralLabel": "Blog6 Controllers",
+            "fields": {
+                "category": {
+                    "class": "rocket\\spec\\ei\\component\\field\\impl\\relation\\ManyToOneSelectEiField",
+                    "props": [],
+                    "label": "Category",
+                    "objectProperty": "category",
+                    "entityProperty": "category"
+                }
+            },
+            "commands": [],
+            "modificators": [],
+            "defaultMaskId": null
         }
     },
     "commonEiMasks": [],

@@ -9,15 +9,17 @@
 	// Blog Artikel aus den Parametern auslesen
 	$blogArticles = $view->getParam('blogArticles');
 	 
-	$view->useTemplate('boilerplate.html', array('title' => 'Übersicht'));
+	$view->useTemplate('\qst\view\boilerplate.html');
 ?>
- 
-<h1>Unsere Blogartikel</h1>
- 
-<?php foreach ($blogArticles as $blogArticle): $view->assert($blogArticle instanceof BlogArticle) ?>
-    <article>
-        <h2><?php $html->out($blogArticle->getTitle()) ?></h2>
-        <p><?php $html->out($blogArticle->getLead()) ?></p>
-        <?php $html->linkToController($blogArticle->getUrlPart(), 'lesen') ?>
-    </article>
-<?php endforeach ?>
+
+<div class="container">
+	<h1>Unsere Blogartikel</h1>
+	 
+	<?php foreach ($blogArticles as $blogArticle): $view->assert($blogArticle instanceof BlogArticle) ?>
+	    <article>
+	        <h2><?php $html->out($blogArticle->getTitle()) ?></h2>
+	        <p><?php $html->out($blogArticle->getLead()) ?></p>
+	        <?php $html->linkToController($blogArticle->getUrlPart(), 'lesen') ?>
+	    </article>
+	<?php endforeach ?>
+</div>

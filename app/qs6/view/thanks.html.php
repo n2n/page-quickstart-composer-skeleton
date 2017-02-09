@@ -9,8 +9,10 @@
 	$blogArticle = $view->getParam('blogArticle');
 	$view->assert($blogArticle instanceof BlogArticle);
 	 
-	$view->useTemplate('boilerplate.html', array('title' => 'Danke'));
+	$view->useTemplate('\qst\view\boilerplate.html');
 ?>
-<h1>Kommentar erfasst</h1>
-<p>Danke für deinen Kommentar</p>
-<?php $html->linkToController($blogArticle->getUrlPart(), 'zurück zum Artikel') ?>
+<div class="container">
+	<h1>Kommentar erfasst</h1>
+	<p>Danke für deinen Kommentar</p>
+	<?php $html->linkToController($blogArticle->getUrlPart(), 'zurück zum Artikel') ?>
+</div>

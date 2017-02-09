@@ -18,9 +18,12 @@ class BlogDao implements RequestScoped {
 	/**
 	 * @return \qs6\bo\BlogArticle[]
 	 */
-	public function getOnlineBlogArticles() {
-		$criteria = $this->em->createSimpleCriteria(BlogArticle::getClass(), array('online' => true),
-				array('id' => 'DESC'));
+	public function getOnlineBlogArticles($category = null) {
+		$criteria = $this->em->createCriteria()->select('ba')->from(BlogArticle::getClass(), 'ba');
+		$criteria->where(array('ba.online' => true));
+		if ($category) {
+			$criteria->where()->match('ba.categories', 'CONTAINS', $category);
+		}
 		return $criteria->toQuery()->fetchArray();
 	}
 
