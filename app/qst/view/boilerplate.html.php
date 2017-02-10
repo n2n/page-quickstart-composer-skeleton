@@ -48,8 +48,10 @@
                         array('class' => 'nav-link')) ?>
             </div>
         </nav>
-      
-        <?php $view->importContentView() ?>
+    
+      	<div class="container">
+	        <?php $view->importContentView() ?>
+      	</div>
           
     <?php $html->bodyEnd() ?>
 </html>
